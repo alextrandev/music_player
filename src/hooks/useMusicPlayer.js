@@ -19,26 +19,25 @@ const useMusicPlayer = () => {
       togglePlay();
     } else {
       state.audioPlayer.pause();
-      // state.audioPlayer = new Audio(state.tracks[index].file);
+      state.audioPlayer = new Audio(state.tracks[index].file);
       state.audioPlayer.play();
       setState({ ...state, currentTrackIndex: index, isPlaying: true})
     }
   }
 
   const playNextTrack = () => {
-    let newIndex;
-    state.currentTrackIndex === state.tracks.length - 1 ? (newIndex = 0) : (newIndex = state.currentTrackIndex + 1);
+    const newIndex = state.currentTrackIndex === (state.tracks.length - 1) ? 0 : (state.currentTrackIndex + 1);
     playTrack(newIndex); 
   }
 
   const playPreviousTrack = () => {
-    let newIndex;
-    state.currentTrackIndex === 0 ? 0 : (newIndex = state.currentTrackIndex - 1);
+    const newIndex = state.currentTrackIndex === 0 ? (state.tracks.length - 1) : (state.currentTrackIndex - 1);
     playTrack(newIndex); 
   }
 
   const playRandomTrack = () => {
-    let randomIndex = Math.random() * state.tracks.length - 1;
+    const randomIndex = Math.floor((Math.random() * state.tracks.length));
+    console.log(randomIndex);
     playTrack(randomIndex);
   }
 
