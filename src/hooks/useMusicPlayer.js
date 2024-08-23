@@ -48,7 +48,7 @@ const useMusicPlayer = () => {
     playPreviousTrack,
     playRandomTrack,
     currentTrackIndex: state.currentTrackIndex,
-    currentTrackName: state.currentTrackIndex !== null && state.tracks[state.currentTrackIndex].name,
+    currentTrackName: state.tracks[state.currentTrackIndex].name,
     trackList: state.tracks,
     isPlaying: state.isPlaying,
   };

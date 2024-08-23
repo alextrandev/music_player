@@ -7,10 +7,12 @@ function TrackList() {
     <>
       {music.trackList.map((track, index) => (
         <div key={`${track}_${index}`}>
-          <button onClick={() => music.playTrack(index)}>
-            {music.isPlaying && music.currentTrackIndex === index ? "Pause" : "Play"}
-          </button>
-          <div>Current track: {track.name}</div>
+          {`${index + 1}: ${track.name}`}
+          <span>
+            <button onClick={() => music.playTrack(index)}>
+              {music.isPlaying && music.currentTrackIndex === index ? "Pause" : "Play"}
+            </button>
+          </span>
         </div>
       ))}
     </>

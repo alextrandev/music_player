@@ -6,7 +6,7 @@ function PlayerControls() {
   return (
     <>
       <div>
-        <p>{music.currentTrackName}</p>
+        <p>Current track: {music.currentTrackName}</p>
       </div>
       <button onClick={music.playPreviousTrack}>Previous</button>
       <button onClick={music.togglePlay}>
