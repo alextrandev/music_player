@@ -12,6 +12,7 @@ function PlayerControls() {
       <button onClick={music.togglePlay}>
         {music.isPlaying ? "Pause" : "Play"}
       </button>
+      <button onClick={music.playRandomTrack}>Random</button>
       <button onClick={music.playNextTrack}>Next</button>
     </>
   );
