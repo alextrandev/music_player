@@ -37,7 +37,6 @@ const useMusicPlayer = () => {
 
   const playRandomTrack = () => {
     const randomIndex = Math.floor((Math.random() * state.tracks.length));
-    console.log(randomIndex);
     playTrack(randomIndex);
   }
 

@@ -14,18 +14,67 @@ function App() {
     audioPlayer: new Audio(),
     tracks: [
       {
-        name: 'Sinister Music ...',
+        name: 'Blinding Lights',
         file: sinister
       },
       {
-        name: 'Stomp Music ...',
+        name: 'Shape of You',
         file: stomp
       },
       {
-        name: 'Sinister Music ...',
+        name: 'Someone Like You',
+        file: underwater
+      },
+      {
+        name: 'Rolling in the Deep',
+        file: sinister
+      },
+      {
+        name: 'Uptown Funk',
+        file: stomp
+      },
+      {
+        name: 'Thinking Out Loud',
+        file: underwater
+      },
+      {
+        name: 'Havana',
+        file: sinister
+      },
+      {
+        name: 'Old Town Road',
+        file: stomp
+      },
+      {
+        name: 'Despacito',
+        file: underwater
+      },
+      {
+        name: 'Bad Guy',
+        file: sinister
+      },
+      {
+        name: 'Levitating',
+        file: stomp
+      },
+      {
+        name: 'Stay',
+        file: underwater
+      },
+      {
+        name: 'Sunflower',
+        file: sinister
+      },
+      {
+        name: 'Senorita',
+        file: stomp
+      },
+      {
+        name: 'Drivers License',
         file: underwater
       }
-    ],
+    ]
+
   });
 
   return (
