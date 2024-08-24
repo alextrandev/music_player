@@ -1,4 +1,6 @@
 import { useMusicPlayer } from "../hooks/useMusicPlayer"
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import PauseIcon from '@mui/icons-material/Pause';
 
 function TrackList() {
   const music = useMusicPlayer();
@@ -10,7 +12,7 @@ function TrackList() {
           {`${index + 1}: ${track.name}`}
           <span>
             <button onClick={() => music.playTrack(index)}>
-              {music.isPlaying && music.currentTrackIndex === index ? "Pause" : "Play"}
+              {music.isPlaying && music.currentTrackIndex === index ? <PauseIcon /> : <PlayArrowIcon />}
             </button>
           </span>
         </div>
