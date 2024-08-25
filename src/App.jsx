@@ -6,6 +6,7 @@ import { MusicContext } from './contexts/MusicContext';
 import sinister from './assets/music/sinister.mp3';
 import stomp from './assets/music/stomp.mp3';
 import underwater from './assets/music/underwater.mp3';
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
 
 function App() {
   const [state, setState] = useState({
@@ -79,6 +80,11 @@ function App() {
 
   return (
     <MusicContext.Provider value={[state, setState]}>
+      <h1>Spotify
+        <span>
+          <MusicNoteIcon />
+        </span>
+      </h1>
       <div>
         <TrackList />
         <PlayerControls />
