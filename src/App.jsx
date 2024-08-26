@@ -6,6 +6,7 @@ import { MusicContext } from './contexts/MusicContext';
 import sinister from './assets/music/sinister.mp3';
 import stomp from './assets/music/stomp.mp3';
 import underwater from './assets/music/underwater.mp3';
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
 
 function App() {
   const [state, setState] = useState({
@@ -14,22 +15,76 @@ function App() {
     audioPlayer: new Audio(),
     tracks: [
       {
-        name: 'Sinister Music ...',
+        name: 'Blinding Lights',
         file: sinister
       },
       {
-        name: 'Stomp Music ...',
+        name: 'Shape of You',
         file: stomp
       },
       {
-        name: 'Sinister Music ...',
+        name: 'Someone Like You',
+        file: underwater
+      },
+      {
+        name: 'Rolling in the Deep',
+        file: sinister
+      },
+      {
+        name: 'Uptown Funk',
+        file: stomp
+      },
+      {
+        name: 'Thinking Out Loud',
+        file: underwater
+      },
+      {
+        name: 'Havana',
+        file: sinister
+      },
+      {
+        name: 'Old Town Road',
+        file: stomp
+      },
+      {
+        name: 'Despacito',
+        file: underwater
+      },
+      {
+        name: 'Bad Guy',
+        file: sinister
+      },
+      {
+        name: 'Levitating',
+        file: stomp
+      },
+      {
+        name: 'Stay',
+        file: underwater
+      },
+      {
+        name: 'Sunflower',
+        file: sinister
+      },
+      {
+        name: 'Senorita',
+        file: stomp
+      },
+      {
+        name: 'Drivers License',
         file: underwater
       }
-    ],
+    ]
+
   });
 
   return (
     <MusicContext.Provider value={[state, setState]}>
+      <h1>Spotify
+        <span>
+          <MusicNoteIcon />
+        </span>
+      </h1>
       <div>
         <TrackList />
         <PlayerControls />
